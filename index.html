@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>friedrich pætzke</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
+      body {
+          max-width: 400px;
+          margin: 0 auto;
+          font-family: 'Josefin Sans', sans-serif;
+          line-height: 1.2;
+          padding: 3px;
+      }
+
+      a {
+          transition: color 0.3s ease;
+          color: #b79a00;
+      }
+      a:hover {
+          color: #627500;
+      }
+      hr {
+          border: 0.5px solid black;
+      }
+
+      header {
+          text-transform: lowercase;
+      }
+      header h1 {
+          text-transform: uppercase;
+          font-size: 6em;
+          word-break: break-all;
+          border: 1px solid black;
+          padding: 15px;
+      }
+      header ul {
+          text-align: right;
+          margin-top: 15px;
+          list-style-type: none;
+      }
+      header ul li {
+          display: inline;
+      }
+      header ul li:after {
+          content: " · ";
+      }
+      header ul li:last-child:after {
+          content: "";
+      }
+      header .symbol {
+          font-size: 0.3em;
+      }
+
+
+      footer {
+          text-align: right;
+          margin-top: 50px;
+          text-transform: lowercase;
+      }
+      footer hr {
+          margin: 0;
+          padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li><a href="https://github.com/paetzke">github</a></li>
+        <li><a href="https://twitter.com/paetzke">twitter</a></li>
+        <!--<li><a href="">xing</a></li>-->
+        <!--<li><a href="https://de.linkedin.com/in/friedrich-p%C3%A4tzke-962594155">linkedin</a></li>-->
+        <li><a href="mailto:f.paetzke@gmail.com">mail</a></li>
+      </ul>
+
+      <h1>friedrich pætzke<span class="symbol"> 👨‍💻</span></h1>
+    </header>
+
+    <section>
+      Software-Developer
+      <ul>
+        <li>Python</li>
+        <li>Django</li>
+        <li>Linux</li>
+        <li>MySQL</li>
+      </ul>
+    </section>
+
+    <footer>
+      ceterum censeo &copy; 2018 friedrich pætzke
+      <hr />
+    </footer>
+
+    <script>
+      function resizeHeader() {
+          let heading = document.querySelector('header h1');
+          let size = 100;
+
+          for (let i = 0; i < 90; i++) {
+              if (Math.abs(1.0 - heading.clientHeight / heading.clientWidth) < 0.1) {
+                  break;
+              }
+              if (size < 3) {
+                  break;
+              }
+
+              if (heading.clientHeight < heading.clientWidth) {
+                  size += 1;
+              } else {
+                  size -= 1;
+              }
+
+              heading.style.fontSize = size + 'px';
+          }
+      }
+
+
+      function main() {
+          resizeHeader();
+          window.addEventListener('resize', resizeHeader);
+      }
+
+
+      main();
+      console.log("👁️");
+    </script>
+  </body>
+
+</html>
