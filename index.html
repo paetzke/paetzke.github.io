@@ -35,6 +35,9 @@
       hr {
           border: 0.5px solid black;
       }
+      li {
+          list-style-type: square;
+      }
 
       header {
           text-transform: lowercase;
@@ -64,6 +67,13 @@
           font-size: 0.3em;
       }
 
+      section li span {
+          opacity: 0;
+          transition: opacity 0.5s linear;
+      }
+      section li:hover span {
+          opacity: 1;
+      }
 
       footer {
           text-align: right;
@@ -87,16 +97,18 @@
         <li><a href="mailto:f.paetzke@gmail.com">mail</a></li>
       </ul>
 
-      <h1>friedrich pætzke<span class="symbol"> 👨‍💻</span></h1>
+      <h1>friedrich pætzke<span class="symbol"> &#x1F468;&#x200D;&#x1F4BB;</span></h1>
     </header>
 
     <section>
       Software-Developer
       <ul>
-        <li>Python</li>
+        <li>Python<span>3, JS, HTML</span></li>
         <li>Django</li>
-        <li>Linux</li>
-        <li>MySQL</li>
+        <li>Linux<span>, NGINX, git, SaltStack</span></li>
+        <li>MySQL<span>, Redis, PostgreSQL, Crate</span></li>
+        <li>Scrum<span>, Kanban</span></li>
+        <li>Emacs<span>, iTerm2, PyCharm, fish</span></li>
       </ul>
     </section>
 
@@ -136,7 +148,6 @@
 
 
       main();
-      console.log("👁️");
     </script>
   </body>
 
