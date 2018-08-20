@@ -18,3 +18,8 @@ icons:
 	convert -resize 152x152 icons/icon.png icons/152x152.png
 	convert -resize 167x167 icons/icon.png icons/167x167.png
 	convert -resize 180x180 icons/icon.png icons/180x180.png
+
+.PHONY: avatars
+avatars:
+	-rm avatars/*x*.png
+	convert -resize 500x500 avatars/avatar.jpg avatars/500x500.jpg
