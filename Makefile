@@ -21,5 +21,5 @@ icons:
 
 .PHONY: avatars
 avatars:
-	-rm avatars/*x*.png
+	-rm avatars/*x*.jpg
 	convert -resize 500x500 avatars/avatar.jpg avatars/500x500.jpg
